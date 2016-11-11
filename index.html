@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AeroGear</title>
+
+    <meta name="description" content="AeroGear">
+    <meta name="author" content="Matthias Wessendorf">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/aerogear.css" id="theme">
+
+    <script src="js/jquery.min.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/prism.css" media="all" rel ="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+     <hr/>
+    <div class="row-fluid marketing">
+        <div class="span2">
+        </div>
+        <div class="span8">
+            <h1 style="color:#00436F">Aero<span style="color:#E25027">Gear</span></h1>
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+    <div class="row-fluid marketing">
+        <div class="span2">
+        </div>
+        <div class="span8">
+            <h2 style="font-size:40px;color:#00436F">The <span style="color:#E25027">Mobile</span> <span style="color:#E25027">Enterprise libraries</span></h2>
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+    <hr/>
+</section>
+
+<section>
+	<h2>Matthias Weßendorf</h2>
+    <div style="float:right;text-align:right;display:inline-block;width: 16%">
+        <img src="images/redhat-logo-cloud.jpeg" width="90%" style="border:none;"/>
+        <img src="images/mwessendorf.png" width="90%" style="border:none;"/>
+    </div>
+	<ul>
+		<li>JBoss by Red Hat</li>
+		<i><a href="http://twitter.com/AeroGears">@AeroGears / Red Hat Mobile</a></i>
+		<li>Member Apache Software Foundation</li>
+		<li>Speaker, Author, Blogger:</li>
+		<i><a href="http://wessendorf.net">http://wessendorf.net</a></i>
+		<li>Twitter:</li>
+		<i><a href="http://twitter.com/mwessendorf">@mwessendorf</a></i>
+	</ul>
+</section>
+<section>
+    <div class="container-narrow">
+
+        <div class="row-fluid marketing" >
+            <div class="span2">
+                <img src="images/mobile_addicted.pngPM.png" width="200%"/>
+
+            </div>
+            <div class="span8">
+                <hr>
+                <div style="color: #E25027;font-size: 35px;text-align: center">Enter</div>
+                <div style="color: #00436F;font-size: 20px;text-align: center">Push...</div>
+				    <img src="images/push_msg.png" alt="" />
+                <hr>
+            </div>
+            <div class="span2">
+                <img src="images/aerogear.png" width="200%"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--section>
+    <h2>Demo: End-to-end</h2>
+	Red Hat Mobile in Action!
+</section-->
+
+<section>
+    <h2>Advanced Demo</h2>
+	AeroDoc: <br/> <br/> Java Backend integration and Geolocations!
+</section>
+
+
+<!--section>
+    <h2>Push Notifications</h2>
+    <ul>
+        <li>Breaking boundaries</li>
+		<ul>
+           <li>Cloud is present – and part of it!</li>
+		</ul>
+		<li>Think larger: Not just your app, on your phone</li>
+    </ul>
+</section-->
+
+<section>
+    <h2>ALL ABOUT</h2>
+    <ul>
+        <li>Engagement with YOUR users...</li>
+    </ul>
+</section>
+
+<!--section>
+    <h2>UnifiedPush Server</h2>
+    <ul>
+        <li>Easy to get started*</li>
+        <li>Cross-platform support</li>
+        <li>Cloud Hosting vs. local</li>
+    </ul>
+</section-->
+
+<!--section>
+    <h2>Docker / UnifiedPush Server</h2>
+	<p>
+		<img src="http://blog.docker.com/wp-content/uploads/2013/06/Docker-logo-011.png" style="border:none;"/>
+	</p>
+</section-->
+
+
+<section>
+    <h2>AeroGear UnifiedPush Server</h2>
+    <img src="images/aerogear_unified_push_server.png" style="border: 0px" />
+</section>
+
+<section>
+    <h2>Use Cases</h2>
+	<li>step by step</li>
+</section>
+
+
+<section>
+    <h2>AeroGear Push 101</h2>
+    <ul>
+        <li>Simple setup*</li>
+        <li>Work with the Admin UI:</li>
+		<ul>
+           <li>Registration code snippets</li>
+           <li>Send push messages</li>
+		</ul>
+    </ul>
+</section>
+
+
+<!--section>
+    <div class="container-narrow">
+        <hr>
+        <div class="jumbotron">
+            <h2>Apache Cordova Plugin</h2>
+        </div>
+        <hr>
+    </div>
+
+    <div class="row-fluid marketing">
+        <div class="span3">
+            <img src="images/js-logo.png"/>
+        </div>
+        <div class="span7">
+     <pre><code style="font-size: 14px" class="language-javascript">
+// Android configuration:
+
+var pushConfig = {
+    pushServerURL: "https://ups.server.com/",
+    android: {
+        senderID: "GOOGLE ID",
+        variantID: "1234541",
+        variantSecret: "234213123"
+    }
+};
+
+// execute registration
+push.register(onNotification, successHandler, errorHandler,
+                pushConfig);
+     </code></pre>
+
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+</section-->
+
+<section>
+    <h2>Demo</h2>
+	<li>Openshift, Xcode and iOS</li>
+</section>
+
+<section>
+    <h2>AeroGear Push 201</h2>
+    <ul>
+        <li>Reach out to specific users</li>
+		<ul>
+           <li>different users</li>
+           <li>groups of users</li>
+		</ul>
+    </ul>
+</section>
+
+
+<section>
+    <div class="container-narrow">
+        <hr>
+        <div class="jumbotron">
+            <h2>Apache Cordova Plugin</h2>
+        </div>
+        <hr>
+    </div>
+
+    <div class="row-fluid marketing">
+        <div class="span3">
+            <img src="images/js-logo.png"/>
+        </div>
+        <div class="span7">
+     <pre><code style="font-size: 14px" class="language-javascript">
+// Android configuration:
+
+var pushConfig = {
+    pushServerURL: "https://ups.server.com/",
+
+	alias:"someuser@mail.com" ,
+    categories: ["JBoss", "mobile"],
+
+    android: {
+        senderID: "GOOGLE ID",
+        variantID: "1234541",
+        variantSecret: "234213123"
+    }
+};
+// execute registration
+push.register(onNotification, successHandler, errorHandler,
+                pushConfig);
+     </code></pre>
+
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>AeroGear Push 301</h2>
+    <ul>
+        <li>Backend integration</li>
+		<ul>
+           <li>REST API</li>
+           <li>Libraries</li>
+			<ul>
+           	 <li>Java, Grails, PHP and Node.js</li>
+			</ul>
+           <li>React on any kind of server event...</li>
+           <li>Automation...</li>
+		</ul>
+    </ul>
+</section>
+
+<section>
+    <h2>AeroGear Java library</h2>
+    <pre><code class="language-java">
+  final PushSender sender = DefaultPushSender.withRootServerURL(...)
+      .pushApplicationId(...)
+      .masterSecret(...)
+      .build();
+
+  final UnifiedMessage unifiedMessage = UnifiedMessage.withMessage()
+         .alert("We have a problem!")
+         .sound("default")
+      .criteria()
+         .aliases(Arrays.asList("Mr. Wolf", "Marcellus Wallace"))
+     .build();
+
+  // Java8 compliant, functional interface
+  sender.send(unifiedMessage, () ->
+      logger.info("successful delivery to UPS returned")
+  );
+</code></pre>
+</section>
+
+
+<section>
+    <h2>AeroGear Push 401</h2>
+    <ul>
+        <li>client notification usage</li>
+		<ul>
+           <li>Push != (real) messaging</li>
+           <li>Send additional keys to the application (not just 'alert')</li>
+           <li>REACT on messages</li>
+			<ul>
+           	 <li>download data</li>
+           	 <li>update the UI, if something new is present</li>
+			</ul>
+		</ul>
+       <li>Let users know that something new occurred!</li>
+    </ul>
+</section>
+
+<!--section>
+    <h2>Don't be a drag to refresh</h2>
+</section-->
+
+<section>
+    <div class="container-narrow">
+        <hr>
+        <div class="jumbotron">
+            <h2>Apache Cordova Plugin</h2>
+        </div>
+        <hr>
+    </div>
+
+    <div class="row-fluid marketing">
+        <div class="span3">
+            <img src="images/js-logo.png"/>
+        </div>
+        <div class="span7">
+     <pre><code style="font-size: 14px" class="language-javascript">
+function onNotification(event) {
+
+    if (event.payload.task === "NEW_LEAD") {
+
+        var latitude  = event.payload.latitude;
+        var longitude = event.payload.longitude;
+
+        // draw something on a map:
+        showCustomerLoc(latitude, longitude);
+    }
+
+    // more checks....
+}
+     </code></pre>
+
+        </div>
+        <div class="span2">
+        </div>
+    </div>
+</section>
+
+<!--section>
+<h2>Demo</h2>
+    <div class="row-fluid marketing">
+        <div class="span3">
+            <img src="images/cvasilak.png"/>
+        </div>
+			<div class="span7">
+			iOS background fetch<br/>
+			by @cvasilak
+		</div>
+			<div class="span2">
+			</div>
+    </div>
+	<ul>
+		<li>https://github.com/cvasilak/BackgroundTransfer</li>
+	</ul>
+</section-->
+
+
+
+<section>
+    <h2>AeroGear Push 501</h2>
+    <ul>
+        <li>rich interaction between client and server</li>
+		<ul>
+           <li>send a push to</li>
+			<ul>
+           	 <li>the clients, walking through the mall</li>
+           	 <li>a nearby driver, that client ordered a taxi</li>
+           	 <li>the sales rep currently the closest to the lead that just came into the system</li>
+			</ul>
+           <li>challenges</li>
+			<ul>
+           	 <li>Real-time</li>
+           	 <li>up-to-date geolocation </li>
+           	 <li>not crazy on battery of the device</li>
+			</ul>
+		</ul>
+    </ul>
+</section>
+
+<section>
+    <h2>Outlook: WebPush</h2>
+    <ul>
+        <li>the new kid on the block</li>
+        <li>Open standard IETF and W3C</li>
+        <li>Mozilla, Microsoft working on that. Google use W3C API with FCM/GCM</li>
+        <li>Apple......</li>
+    </ul>
+</section>
+
+<!--section>
+    <h2>Conclusion</h2>
+    <ul>
+        <li>Engaging moments: impact on users, via push!</li>
+        <li>Target specific user groups for powerful and flexible filtering</li>
+        <li>automate frequent pushes (get your backend right!)</li>
+        <li>Show some UI LOVE → react on push messages</li>
+        <li>Interact with users! </li>
+    </ul>
+</section-->
+
+<section>
+    <h2>Thanks</h2>
+    <p style="font-size:30px;color:#00436F"><span style="font-size:30px;color:#E25027"><a href="https://twitter.com/mwessendorf">@mwessendorf</a></span></p>
+        
+        <a href="https://github.com/matzew/push-notifications">Slides</a> <br/>
+        <a href="http://aerogear.org">http://aerogear.org</a> <br/>
+        <a href="https://twitter.com/aerogears">@AeroGears</a><br/>
+        <a href="">IRC: #aerogear</a> <br/>
+        <a href="http://aerogear.org/community/">MAILING LIST</a>
+
+</section>
+
+</div>
+
+
+</div>
+
+<script src="js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="js/ag.js"></script>
+<script src="js/prism.js"></script>
+
+</body>
+</html>
